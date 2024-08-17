@@ -1,0 +1,12 @@
+[gd_scene load_steps=4 format=3 uid="uid://7dega2sv7hxh"]
+
+[ext_resource type="Texture2D" uid="uid://bjste681ejkvx" path="res://icon.svg" id="1_mdj18"]
+[ext_resource type="Script" path="res://Draggable.gd" id="2_1biwr"]
+[ext_resource type="Resource" uid="uid://d1df8524onpha" path="res://Resources/Draggable.tres" id="3_e2enq"]
+
+[node name="IObject" type="TextureRect"]
+custom_minimum_size = Vector2(100, 100)
+texture = ExtResource("1_mdj18")
+expand_mode = 1
+script = ExtResource("2_1biwr")
+item_data_obj = ExtResource("3_e2enq")

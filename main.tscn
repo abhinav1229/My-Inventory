@@ -1,0 +1,162 @@
+[gd_scene load_steps=14 format=3 uid="uid://dn5bc6idwocwc"]
+
+[ext_resource type="PackedScene" uid="uid://bk7tlx1t1auyg" path="res://i_slot.tscn" id="1_s3tyv"]
+[ext_resource type="Texture2D" uid="uid://bjste681ejkvx" path="res://icon.svg" id="2_tu7v3"]
+[ext_resource type="Script" path="res://IData.gd" id="3_nhw43"]
+[ext_resource type="PackedScene" uid="uid://7dega2sv7hxh" path="res://i_object.tscn" id="4_6bled"]
+[ext_resource type="Texture2D" uid="uid://b2bxya40tyhj0" path="res://DraggableItems/Icon Pack - Berries Red.png" id="5_lfyxn"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_caghh"]
+bg_color = Color(1, 1, 1, 0.607843)
+corner_radius_top_left = 5
+corner_radius_top_right = 5
+corner_radius_bottom_right = 5
+corner_radius_bottom_left = 5
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_oby34"]
+bg_color = Color(0, 0, 0, 0.243137)
+border_width_left = 3
+border_width_top = 3
+border_width_right = 3
+border_width_bottom = 3
+border_color = Color(0.329412, 0.329412, 0.329412, 1)
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
+
+[sub_resource type="Resource" id="Resource_11ruj"]
+resource_local_to_scene = true
+script = ExtResource("3_nhw43")
+name = "Prime2"
+icon_texture = ExtResource("2_tu7v3")
+
+[sub_resource type="Resource" id="Resource_mkuvp"]
+script = ExtResource("3_nhw43")
+name = ""
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_j1g3w"]
+bg_color = Color(0, 0, 0, 0.266667)
+border_width_left = 3
+border_width_top = 3
+border_width_right = 3
+border_width_bottom = 3
+border_color = Color(0.329412, 0.329412, 0.329412, 1)
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
+
+[sub_resource type="Resource" id="Resource_6y8wq"]
+resource_local_to_scene = true
+script = ExtResource("3_nhw43")
+name = "Draggable3"
+icon_texture = ExtResource("2_tu7v3")
+
+[sub_resource type="Resource" id="Resource_f71rr"]
+resource_local_to_scene = true
+script = ExtResource("3_nhw43")
+name = "Draggable344w"
+icon_texture = ExtResource("2_tu7v3")
+
+[sub_resource type="Resource" id="Resource_dnel4"]
+resource_local_to_scene = true
+script = ExtResource("3_nhw43")
+name = "Draggable344"
+icon_texture = ExtResource("2_tu7v3")
+
+[node name="Control" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="GameContainer" type="Panel" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 170.4
+offset_top = 64.0
+offset_right = -170.4
+offset_bottom = -64.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_caghh")
+
+[node name="InventoryContainer" type="Panel" parent="GameContainer"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 19.88
+offset_top = 25.6
+offset_right = -298.2
+offset_bottom = -25.6
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_oby34")
+
+[node name="GridContainer" type="GridContainer" parent="GameContainer/InventoryContainer"]
+custom_minimum_size = Vector2(79.52, 79.52)
+layout_mode = 2
+offset_left = 10.0
+offset_top = 15.0
+offset_right = 485.0
+offset_bottom = 450.0
+theme_override_constants/h_separation = 15
+theme_override_constants/v_separation = 10
+columns = 5
+
+[node name="ISlot" parent="GameContainer/InventoryContainer/GridContainer" instance=ExtResource("1_s3tyv")]
+layout_mode = 2
+item_data = SubResource("Resource_11ruj")
+
+[node name="ISlot2" parent="GameContainer/InventoryContainer/GridContainer" instance=ExtResource("1_s3tyv")]
+layout_mode = 2
+item_data = SubResource("Resource_mkuvp")
+
+[node name="InventoryItems" type="Panel" parent="GameContainer"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 536.76
+offset_top = 25.6
+offset_right = -19.8799
+offset_bottom = -25.6
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_j1g3w")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="GameContainer/InventoryItems"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -50.0
+offset_top = -206.0
+offset_right = 50.0
+offset_bottom = 206.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/separation = 10
+
+[node name="IObject" parent="GameContainer/InventoryItems/VBoxContainer" instance=ExtResource("4_6bled")]
+layout_mode = 2
+texture = ExtResource("5_lfyxn")
+item_data_obj = SubResource("Resource_6y8wq")
+
+[node name="IObject2" parent="GameContainer/InventoryItems/VBoxContainer" instance=ExtResource("4_6bled")]
+layout_mode = 2
+texture = ExtResource("5_lfyxn")
+item_data_obj = SubResource("Resource_f71rr")
+
+[node name="IObject3" parent="GameContainer/InventoryItems/VBoxContainer" instance=ExtResource("4_6bled")]
+layout_mode = 2
+texture = ExtResource("5_lfyxn")
+item_data_obj = SubResource("Resource_dnel4")

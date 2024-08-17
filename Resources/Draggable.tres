@@ -1,0 +1,10 @@
+[gd_resource type="Resource" script_class="ItemData" load_steps=3 format=3 uid="uid://d1df8524onpha"]
+
+[ext_resource type="Script" path="res://IData.gd" id="1_dc8qv"]
+[ext_resource type="Texture2D" uid="uid://bjste681ejkvx" path="res://icon.svg" id="1_qdxi2"]
+
+[resource]
+resource_local_to_scene = true
+script = ExtResource("1_dc8qv")
+name = "Draggable"
+icon_texture = ExtResource("1_qdxi2")

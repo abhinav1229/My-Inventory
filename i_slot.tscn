@@ -1,0 +1,12 @@
+[gd_scene load_steps=4 format=3 uid="uid://bk7tlx1t1auyg"]
+
+[ext_resource type="Texture2D" uid="uid://pte74oqkwbaa" path="res://button_square_line.png" id="1_jnnq3"]
+[ext_resource type="Script" path="res://ISlot.gd" id="2_dknyt"]
+[ext_resource type="Resource" uid="uid://b6xrjto7pouf8" path="res://Item_data.tres" id="3_odko6"]
+
+[node name="ISlot" type="TextureRect"]
+custom_minimum_size = Vector2(79.52, 79.52)
+texture = ExtResource("1_jnnq3")
+expand_mode = 1
+script = ExtResource("2_dknyt")
+item_data = ExtResource("3_odko6")

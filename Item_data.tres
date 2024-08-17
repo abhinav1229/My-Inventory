@@ -1,0 +1,10 @@
+[gd_resource type="Resource" script_class="ItemData" load_steps=3 format=3 uid="uid://b6xrjto7pouf8"]
+
+[ext_resource type="Script" path="res://IData.gd" id="1_b6d4j"]
+[ext_resource type="Texture2D" uid="uid://bjste681ejkvx" path="res://icon.svg" id="1_vao3p"]
+
+[resource]
+resource_local_to_scene = true
+script = ExtResource("1_b6d4j")
+name = "Primweq"
+icon_texture = ExtResource("1_vao3p")
